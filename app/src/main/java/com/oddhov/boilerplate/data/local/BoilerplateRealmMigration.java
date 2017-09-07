@@ -8,6 +8,8 @@ import io.realm.RealmMigration;
  */
 
 public class BoilerplateRealmMigration implements RealmMigration {
+    public static final int DATABASE_VERSION = 1;
+
     @Override
     public void migrate(final DynamicRealm realm, long oldVersion, long newVersion) {
 

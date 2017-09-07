@@ -10,18 +10,18 @@ import io.reactivex.Single;
  * Created by sammy on 06/09/17.
  */
 
-public class RemoteDataSourceImpl implements RemoteDataSource {
+public class NetworkDataSourceImpl implements NetworkDataSource {
     //region Fields
     private ApiService mApiService;
     //endregion
 
     @Inject
-    public RemoteDataSourceImpl(ApiService apiService) {
+    public NetworkDataSourceImpl(ApiService apiService) {
         this.mApiService = apiService;
     }
 
     @Override
-    public Single<DummyData> getDataFromServer() {
+    public Single<DummyData> getData() {
         return mApiService.getData();
     }
 }
